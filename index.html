@@ -1,83 +1,94 @@
-
+<!--Watch out for indenting :)-->
 <!DOCTYPE html>
 <head>
 	<title>Casey</title>
-
-<!-- <p><a href="#">Text here</a></p> -->
+	<!--Just watch out for leaving code around I think you meant to delete this? :)-->
+	<!-- <p><a href="#">Text here</a></p> -->
 	<meta charset="utf-8" />
 
 	<link rel="stylesheet" href="style.css" type="text/css" />
+	<!--I don't see the advantage of adding a class of body to the body tag.  I would just use the body selector for CSS -->
+	<body class="body">
+		<!--The same for the <header> tag. Both the Body and Header Elements should be unquie to the html document, so you could just
+		use body {} and header {} as CSS selectors -->
+		<header class="mainHeader">
+			<!--Did you mean for your picture to be a link? I think this should just be a self closing img tag.
+			Also, for the purpose of "Separation of Concerns" which you will hear throughout this course, I would take the width and height out of the
+			html and instead modify the image using CSS!-->
+			<a href="http://imgur.com/EE5bXde"><img src="http://i.imgur.com/EE5bXde.jpg?1" width="400" height="300" title="source: imgur.com" /></a>
+			<div class="menu_simple">
+				<ul>
+					<li><a href="#">About Me</a></li>
+					<li><a href="#">Resume</a></li>
+					<li><a href="#">In Progress</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</header>
 
-<body class="body">
-
-	<header class="mainHeader">
-		<a href="http://imgur.com/EE5bXde"><img src="http://i.imgur.com/EE5bXde.jpg?1" width="400" height="300" title="source: imgur.com" /></a>
-    <div class="menu_simple">
-    <ul>
-			<li><a href="#">About Me</a></li>
-			<li><a href="#">Resume</a></li>
-			<li><a href="#">In Progress</a></li>
-			<li><a href="#">Contact</a></li>
-		</ul>
-	</header>
-
-	<div class="mainContent">
-	<div class="content">
-	<article class="topcontent">
+			<div class="mainContent">
+				<div class="content">
+					<article class="topcontent">
 
 
-					<footer>
-						<p class="post-info">Development Rock Star!</p>
-					</footer>
+						<footer>
+							<p class="post-info">Development Rock Star!</p>
+						</footer>
+						<!--The Content html element has been deprecated! Instead I would use a section tag, that typically
+						is used as a nested element in an article tag, or even div work as well! -->
+						<!--http://html5doctor.com/the-article-element/ -->
+						<content>
+							<h2>About Me</h2>
+							<p>Standing in for filler.  Come on back to see what happens!</p>
+							<p>I have been attending school at American Military University,
+								because the military pays for the school for 5 classes per year.
+								For the first few years I played around and did not utilize this
+								resource.  But now I have been as much as I can, I am 12 classes
+								away from obtaining my Bachelors of Science in Information
+								Systems Security focusing on Digital Forensics.  Working in
+								Internaional Military Corrections has shown me a lot of bad
+								things people do on the Internet.  Working in the Digital
+								Forensics field, I feel like I would still contribute globally
+								while still playing with technology.</p>
+							</content>
 
-					<content>
-						<h2>About Me</h2>
-						<p>Standing in for filler.  Come on back to see what happens!</p>
-						<p>I have been attending school at American Military University,
-              because the military pays for the school for 5 classes per year.
-              For the first few years I played around and did not utilize this
-              resource.  But now I have been as much as I can, I am 12 classes
-              away from obtaining my Bachelors of Science in Information
-              Systems Security focusing on Digital Forensics.  Working in
-              Internaional Military Corrections has shown me a lot of bad
-              things people do on the Internet.  Working in the Digital
-              Forensics field, I feel like I would still contribute globally
-              while still playing with technology.</p>
-					</content>
+						</article>
+						<!--Similar to my feedback above, I feel like this should all be under one article tag, with separate sections
+						to divide the "about me" and "thoughts"-->
+						<article class="bottomcontent">
+							<!--Again below I would use section instead -->
+							<content>
+								<h2>Thoughts</h2>
+								<p>When I attended our mandatory separation class
+									where they teach us how to be marketable and how to
+									do resumes I personally felt cheated not because they
+									did not do a good job but because the material felt dated.
+									I want to make the process better but need to
+									learn the foundations first.</p>
+								</content>
 
-				</article>
+							</article>
+						</div>
+						<!--The way your page is structure right now, the aside element might be used
+						semantically correct, as it's not directly related to about me or thoughts, but the name of your classes
+						seems off. Since the aside isn't performing as a sidebar, its in the middle of the html page, I would try to name it something else
+						maybe even just "center-aside"?-->
+						<aside class="middle-sidebar">
 
-				<article class="bottomcontent">
+							<h2>Coding so far...</h2>
+							<p>As it stands now I have looked and watched dozens of Youtube
+								videos, started with OneMonthRails, and even Udemy.  </p>
 
-					<content>
-						<h2>Thoughts</h2>
-						<p>When I attended our mandatory separation class
-              where they teach us how to be marketable and how to
-              do resumes I personally felt cheated not because they
-              did not do a good job but because the material felt dated.
-              I want to make the process better but need to
-              learn the foundations first.</p>
-					</content>
+							</aside>
 
-				</article>
-		</div>
-				<aside class="middle-sidebar">
+							<aside class="bottom-sidebar">
 
-					<h2>Coding so far...</h2>
-					<p>As it stands now I have looked and watched dozens of Youtube
-            videos, started with OneMonthRails, and even Udemy.  </p>
+								<h2>Contact Information</h2>
+								<p>Address:Casey A. Gil
+									caseyagil@gmail.com
+								</p>
 
-				</aside>
+							</aside>
+						</div>
 
-				<aside class="bottom-sidebar">
-
-					<h2>Contact Information</h2>
-					<p>Address:Casey A. Gil
-					   		     caseyagil@gmail.com
-					</p>
-
-				</aside>
-	</div>
-
-</body>
-</html>
+					</body>
+					</html>
