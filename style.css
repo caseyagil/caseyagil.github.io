@@ -15,6 +15,9 @@ html {
 header {
       text-align: center;
       background: white;
+      /*Background-size is used to describe the size of a background image, so I'm not sure if you meant something else
+      or this was a typo :) */
+      background-size: cover;
       color: white;
     }
 /*Make sure to watch out for indenting below!*/
@@ -45,12 +48,16 @@ header {
       color: white;
       background: black;
     }
+    /*I typically write my CSS for ul before li, I think it makes more sense
+    for this to be moved above since li is nested within the ul */
     ul {
         margin: 0;
         padding-left: 0;
         width: 200;
         background: black;
     }
+    /*You already have li listed above, make sure to make your code DRY and combine
+    the two*/
     li {
       display: inline;
       padding: 0px 10px 0px 10px;
@@ -58,6 +65,8 @@ header {
     li a.active {
       background-color: black;
     }
+    /*I am slightly confused with what exactly your trying to achieve
+    with this. Play around with your code to see if this is necessary with the a selectors :)*/
     li a:hover:not(.active) {
       background-color: black;
       color: white;
